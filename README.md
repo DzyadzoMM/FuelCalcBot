@@ -34,6 +34,8 @@
 ├── main.py             # Точка входу (ініціалізація та запуск Long Polling)
 └── requirements.txt    # Залежності проєкту
 
+```
+
 ## 👨‍💻 Розробник
 
 * **Автор:** Dzyadzo Myroslav  
