@@ -41,6 +41,6 @@
 * **Автор:** Dzyadzo Myroslav  
 * **Зв'язок:** [LinkedIn Profile](https://www.linkedin.com/in/myroslav-dzyadzo?utm_source=share_via&utm_content=profile&utm_medium=member_android)
 * **🤖 Запустити бота в Telegram:** [@Myfuel_calc_bot](https://t.me/Myfuel_calc_bot)
-*  ** Бот працює на Render.com  для його роботи потрібно перейти на сайт (https://fuelcalcbot.onrender.com)
+*  ** Бот працює на Render.com  для його роботи потрібно перед запуском перейти на сайт для його пробудження (https://fuelcalcbot.onrender.com) потім бот працюватими
 🛡 *© Всі права захищені.*
 
