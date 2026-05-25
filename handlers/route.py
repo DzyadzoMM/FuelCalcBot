@@ -53,6 +53,27 @@ async def start(message: Message):
         parse_mode="HTML", 
         reply_markup=get_main_inline_start_keyboard()
     )
+@router.message(Command("help"))
+@router.message(F.text.lower() == "список команд")
+async def help_command(message: Message):
+    await message.answer(
+        "📜 <b>Список команд:</b>\n\n"
+        "▶️ /start — Запуск бота\n"
+        "❓ /help — Підказки та допомога\n"
+        "ℹ️ /about — Про розробника та проект",
+        parse_mode="HTML",
+    )
+    
+@router.message(Command("about"))
+@router.message(F.text.lower() == "про нас")
+async def about(message: Message):
+    await message.answer(
+        "ℹ️ <b>Інформація:</b>\n\n"
+        "🛡 © Всі права захищені.\n"
+        "👨‍💻 Розробник: <b>Dzyadzo Myroslav</b>",
+        parse_mode="HTML",
+        reply_markup=get_main_inline_dev_keyboard()
+    )
 
 @router.message(Form.waiting_for_mpg, Command("cancel"))
 @router.message(Form.waiting_for_m, Command("cancel"))
@@ -148,28 +169,6 @@ async def process_m_calculation(message: Message, state: FSMContext):
         f"🇺🇸 <b>{m_value} милі</b> 🌍 еквівалентно приблизно:\n"
         f"➡️ <b>{km:.2f} км</b>",
         parse_mode="HTML"
-    )
-
-@router.message(Command("help"))
-@router.message(F.text.lower() == "список команд")
-async def help_command(message: Message):
-    await message.answer(
-        "📜 <b>Список команд:</b>\n\n"
-        "▶️ /start — Запуск бота\n"
-        "❓ /help — Підказки та допомога\n"
-        "ℹ️ /about — Про розробника та проект",
-        parse_mode="HTML",
-    )
-    
-@router.message(Command("about"))
-@router.message(F.text.lower() == "про нас")
-async def about(message: Message):
-    await message.answer(
-        "ℹ️ <b>Інформація:</b>\n\n"
-        "🛡 © Всі права захищені.\n"
-        "👨‍💻 Розробник: <b>Dzyadzo Myroslav</b>",
-        parse_mode="HTML",
-        reply_markup=get_main_inline_dev_keyboard()
     )
   
 @router.message()
